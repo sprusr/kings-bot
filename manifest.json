@@ -13,7 +13,7 @@
     "default_title": "Snipe!"
   },
   "permissions": [
-    "https://www.eventbrite.co.uk/e/*"
+    "http://www.eventbrite.co.uk/e/hackkings-20-tickets-19455835929"
   ],
   "manifest_version": 2
 }

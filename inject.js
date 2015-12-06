@@ -12,10 +12,9 @@
 
   var loop = function() {
     var refreshInterval = setInterval(function() {
-      //var elem = $("body").find('[id*=quant_' + ticketId + '_None]');
-      var elem = $("body").find('[itemprop="offers"]');
+      var elem = $("body").find('#ticket_table');
 
-      $(elem).load(location.href + ' [itemprop="offers"]');
+      $(elem).load(location.href + ' #ticket_table');
 
       console.log('refreshed');
 
@@ -23,12 +22,11 @@
         clearInterval(refreshInterval);
         get();
       }
-    }, 5000);
+    }, 2000);
   }
 
   var detect = function() {
     var elem = $("body").find('[id*=quant_' + ticketId + '_None]');
-    //var elem = $("body").find('.js-ticket-box');
 
     if(elem.length > 0) {
       return true;
@@ -38,9 +36,8 @@
   }
 
   var get = function() {
-    //$('[id*=quant_' + ticketId + '_None]').val('1');
-    //$('.js-checkout-button')[0].click();
-    $('.js-register-button')[0].click();
+    $('[id*=quant_' + ticketId + '_None]').val('1');
+    $('.js-checkout-button')[0].click();
   }
 
   setup();

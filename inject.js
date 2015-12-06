@@ -13,9 +13,9 @@
   var loop = function() {
     var refreshInterval = setInterval(function() {
       //var elem = $("body").find('[id*=quant_' + ticketId + '_None]');
-      var elem = $("body").find('.ticket-box-status');
+      var elem = $("body").find('[itemprop="offers"]');
 
-      $(elem).load(location.href + " [data-automation=" + elem.attr('data-automation') + ']');
+      $(elem).load(location.href + ' [itemprop="offers"]');
 
       console.log('refreshed');
 
@@ -23,7 +23,7 @@
         clearInterval(refreshInterval);
         get();
       }
-    }, 1000);
+    }, 5000);
   }
 
   var detect = function() {
